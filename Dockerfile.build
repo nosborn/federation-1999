@@ -1,0 +1,8 @@
+ARG GOVERSION
+FROM golang:${GOVERSION}
+
+RUN export DEBIAN_FRONTEND=noninteractive \
+    && apt-get update \
+    && apt-get -y install --no-install-recommends \
+        "libncurses-dev=*" \
+    && rm -rf /var/lib/apt/lists

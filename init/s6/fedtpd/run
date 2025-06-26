@@ -1,0 +1,14 @@
+#!/bin/sh
+
+export DBPATH=/home/fed/data
+
+if [ -n "${FLY_APP_NAME:-}" ]; then
+  FEDTPD_FLAGS='-free-period -test-features'
+else
+  FEDTPD_FLAGS='-check -free-period -test-features -trace'
+fi
+
+cd /home/fed || exit
+exec /usr/bin/s6-setuidgid fed /home/fed/start ${FEDTPD_FLAGS}
+
+# vim: ft=sh
