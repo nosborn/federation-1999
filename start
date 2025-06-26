@@ -1,0 +1,39 @@
+#!/bin/sh
+#
+# $Id: start.in,v 1.10 1999/04/24 12:37:02 nick Exp $
+
+prefix=/opt/fed
+exec_prefix="${prefix}"
+
+PATH="/bin:/usr/bin:/usr/contrib/bin:/usr/local/bin:${exec_prefix}/bin"
+export PATH
+
+#ulimit -HSc 0
+umask 0007
+
+if [ -e backup/.run ]; then
+  backup="backup/$(uname -n)-$(date +%Y%m%d-%H%M).cpio"
+  echo "Backup starts: ${backup}" >&2
+  find data lock -type f ! -name "person.d-*" | cpio -oc >"${backup}"
+  echo "Backup ends" >&2
+  rm -f backup/.run
+  nice -n 10 bzip2 -9 "${backup}" &
+  echo "Deleting old backups:" >&2
+  find backup -type f -name '*.bz2' -atime +30 -print -exec rm {} \;
+  find backup -type f -name '*.gz' -atime +30 -print -exec rm {} \;
+  find backup -type f -name '*.cpio' -atime +30 -print -exec rm {} \;
+fi
+
+if [ -e init-ibgames-db.sh ]; then
+  DBPATH="${HOME}/data" ./init-ibgames-db.sh
+fi
+
+# if [ -e /person.d ]; then
+#   cp -v /person.d /data/
+#   chown 0660 data/person.d
+# fi
+
+export LANG=en_US.iso88591
+export OPTMSG=1
+
+exec "${exec_prefix}/lbin/fedtpd" "$@" </dev/null >/dev/null
