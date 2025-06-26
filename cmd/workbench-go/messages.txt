@@ -1,0 +1,1564 @@
+# Copyright (c) 1987-1997 Alan Lenton & Interactive Broadcasting Ltd.
+# All Rights Reserved.
+#
+# No part of this software may be reproduced, transmitted, transcribed,
+# stored in a retrieval system, or translated into any human or computer
+# language, in any form or by any means, electronic, mechanical,
+# magnetic, optical, manual or otherwise, without the express written
+# permission of the copyright holder.
+#
+# $Id: messages.txt,v 1.2 1998/12/22 07:10:04 nick Exp $
+#
+#message Hello
+
+Welcome to the Explorer's Workbench.
+
+#
+#message Goodbye
+
+Leaving the Explorer's Workbench...
+
+#
+#message MainMenu
+
+MAIN MENU
+
+  [1] Events menu
+  [2] Objects and mobiles menu
+  [3] Locations menu
+
+  [4] Check files - unchecked files will not be loaded
+  [5] Delete the contents of one or more workbench files
+
+  [0] Leave the Explorer's Workbench
+
+#
+#message MainMenu_New
+
+MAIN MENU
+
+  [1] Events menu
+  [2] Objects and mobiles menu
+  [3] Locations menu
+
+  [4] Check files - unchecked files will not be loaded
+  [5] Delete the contents of one or more workbench files
+
+  [6] Download files
+  [7] Upload files
+
+  [0] Leave the Explorer's Workbench
+
+#
+#message MenuPrompt
+#trim
+What do you want to do?
+#
+#message UncheckedPreamble
+
+Your planet needs to be checked before the game will load it.
+
+#
+#message UncheckedPrompt
+#trim
+Are you sure you want to quit?
+#
+#message CheckLocationCount
+Highest location number is {%d}
+#
+#message CheckEventCount
+Highest event number is {%d}
+#
+#message CheckObjectCount
+There are {%d} objects
+#
+#message CheckingEvents
+
+Checking events...
+
+#
+#message CheckingEvent
+#trim
+Checking event {%d}...
+#
+#message CheckEventsOK
+
+No errors found in events file!
+
+#
+#message CheckEventsError
+
+*** Errors found in events file! ***
+
+#
+#message AreYouSure
+Are you sure you want to do this
+
+#
+#message MAG_GUN
+  Mag gun
+
+#
+#message MISSILE_RACK
+  Missile rack
+
+#
+#message LASER
+  Laser
+
+#
+#message TWIN_LASER
+  Twin Lasers
+
+#
+#message NONE
+  None!
+
+#
+#message MN77
+
+There seems to be a problem with your workbench files. Please try again later.
+
+#
+#message EditorHelp
+
+-------------------------------------------------
+Commands available are:
+  *c,#  Change text in line number #. You will be
+        prompted for the other information needed
+  *d,#  Delete line number #
+  *h    Help information
+  *l    List the text in the editor
+  *s    Store the edited text
+  *t    Total number of characters in the editor
+  *w    Wipe the text in the buffer and start again
+  *x    Exit, abandoning the edit
+
+To force a paragraph break leave an empty line.
+---------------------------------------------------
+
+#
+#message MN83
+
+Cannot find string '{%s}'
+
+#
+#message MN84
+
+Insufficient memory - abandoning insert.
+
+#
+#message EditorFull
++++ No more room in the editor! +++
+
+#
+#message EditorTextTooBig
+
+Your text is too big ({%d} characters).
+
+#
+#message EditorCharacterCount
+
+{%d} characters so far.
+
+#
+#message EventMenu
+
+EVENTS MENU
+
+  [1] Write a new event
+  [2] Edit an existing event
+  [3] List events
+
+  [0] Return to the main menu
+
+#
+#message LocationMenu
+
+LOCATIONS MENU
+
+  [1] Write a new location
+  [2] Edit an existing location
+  [3] List locations
+
+  [4] Change location references
+
+  [0] Return to the main menu
+
+#
+#message ObjectMenu
+
+OBJECTS AND MOBILES MENU
+
+  [1] Write a new object or mobile
+  [2] Edit an existing object or mobile
+  [3] List objects and mobiles
+
+  [0] Return to the main menu
+
+#
+#message MN92
+Event number {%d}
+#
+#message MN93
+Change strength by {%d}
+#
+#message MN94
+Change stamina by {%d}
+#
+#message MN95
+Change intelligence by {%d}
+#
+#message MN96
+Change dexterity by {%d}
+#
+#message MN97
+Check strength for min of {%d}/change by {%d}
+#
+#message MN98
+Check stamina for min of {%d}/change by {%d}
+#
+#message MN99
+Check intelligence for min of {%d}/change by {%d}
+#
+#message MN100
+Check dexterity for min of {%d}/change by {%d}
+#
+#message MN101
+Type 8 - special event
+#
+#message MN102
+Check for object {%d} not carried.
+#
+#message MN103
+Check for object {%d} carried.
+#
+#message MN104
+If the test fails:
+#
+#message MN105
+Change strength by {%d}
+#
+#message MN106
+Change stamina by {%d}
+#
+#message MN107
+Change intelligence by {%d}
+#
+#message MN108
+Change dexterity by {%d}
+#
+#message MN109
+Text for player:
+#
+#message MN110
+
+Move to location number: {%4d}
+#
+#message MN111
+Which event do you want to edit?
+
+#
+#message MN112
+That event doesn't exist!
+
+#
+#message MN113
+Is this the one you wanted to edit? [Y/N]
+
+#
+#message MN114
+OK - returning to edit tools...
+
+#
+#message MN115
+
+What would you like to change?
+ [1] Change amount by which attribute is altered
+ [2] Descriptive text
+ [3] New location to move to
+ [4] Object to be carried/absent
+ [5] Quit editing this event
+ [6] Redisplay event
+ [7] Type of event
+#
+#message MN116
+What is the new value to test for?
+
+#
+#message MN117
+What is the amount you want to change it by?
+
+#
+#message MN118
+*l to list existing text for change - 159 chars!
+
+#
+#message MN119
+What is the number of the new location?
+
+#
+#message MN120
+What is the number of the object (-ve if you want to check object is absent)?
+
+#
+#message MN121
+#trim
+Event types are:
+  [1] Change a persona attribute
+  [2] Test a persona attribute for a minimum value
+  [3] Object carried on entry test
+Which one do you want?
+#
+#message MN122
+Not a legitimate event type!
+#
+#message MN123
+#trim
+Write the changes back to disk? [Y/N]
+#
+#message MN124
+Changes written out to disk...
+
+#
+#message MN125
+Unable to write changes to disk!
+
+#
+#message MN126
+Ignoring changes...
+
+#
+#message MN127
+
+Event record writer
+
+#
+#message MN128
+Event number {%d}
+#
+#message MN129
+The following types of events are currently available:
+ [1] Change a persona attribute
+ [2] Test a persona attribute for a minimum value
+ [3] Object carried on entry test
+Event type:
+
+#
+#message MN130
+Which attribute do you wish to change?
+
+#
+#message MN131
+How much do you want to alter it by [a negative amount will reduce the attribute]?
+
+#
+#message MN132
+Which attribute do you wish to test?
+
+#
+#message MN133
+What is the number of the object you wish to check for?
+A positive number indicates that the player SHOULD be carrying the object, a negative value indicates that the player SHOULD NOT be carrying the object.
+
+#
+#message MN134
+Which attribute do you wish to change if the test fails?
+
+#
+#message MN135
+How much do you want to alter it by [a negative amount will reduce the attribute]?
+
+#
+#message MN136
+Text to go to player: [159 characters]
+
+#
+#message MN137
+New location to move to: [0 = no move]
+
+#
+#message MN138
+Happy?
+
+#
+#message MN139
+
+Unable to write to file!
+
+#
+#message MN140
+Record written to file...
+
+#
+#message MN141
+Another event to enter?
+
+#
+#message MN142
+You can change the following attributes:
+ [1] - Stamina
+ [2] - Strength
+ [3] - Dexterity
+ [4] - Intelligence
+Which would you like to change?
+
+#
+#message MN143
+Not a valid attribute. Please try again
+
+#
+#message MN144
+Events:
+  In: {%2d}   Out:  {%2d}
+
+#
+#message MN145
+Which event do you want to alter?
+ [1] In or [2] Out?
+
+#
+#message MN146
+Leaving events unaltered
+
+#
+#message MN147
+New value for event?
+
+#
+#message MN148
+ 1. Unlit          2. Interstellar Link
+ 3. Death          4. Cafe/bar
+ 5. Space          6. Trading exchange
+ 7. Weapon shop    8. Insurance Broker
+ 9. Clothes shop  10. Ship Builders
+11. Peace loc     12. Hospital location
+13. Vacuum        14. Ship Repair yard
+15. General Shop  16. Electronics shop
+17. Lockable area
+     - dropped objects recycled
+
+#
+#message MN149
+
+Flags currently set:
+
+#
+#message MN150
+Which flag you wish to change?
+
+#
+#message MN151
+Flag changed...
+
+#
+#message MN152
+
+This command will go though the movement tables of all the locations and change all references to the location you specify to a new number. Continue? [Y/N]
+
+#
+#message MN153
+What location number would you like to change?
+
+#
+#message MN154
+What do you want to change it to?
+
+#
+#message MN155
+Updating location number: {%d}...
+
+#
+#message MN156
+Up  = {%3d}  Dn  = {%3d}  In  = {%3d}
+
+#
+#message MN157
+Out = {%3d}  Pl  = {%3d}
+
+#
+#message MN158
+
+Which direction do you want to change?
+ [1] North     [2] Northeast
+ [3] East      [4] Southeast
+ [5] South     [6] Southwest
+ [7] West      [8] Northwest
+ [9] Up       [10] Down
+[11] In       [12] Out
+[13] Planet
+
+#
+#message MN159
+
+What is it's new value?
+
+#
+#message MN160
+
+No such direction!!!!
+
+#
+#message MN161
+
+Locations lister
+   Start location?
+
+#
+#message MN162
+
+Stop location?
+
+#
+#message MN163
+
+Location number: {%d}
+
+#
+#message MN164
+Movement table:
+    n   ne    e   se    s   sw    w   nw   up    d   in  out plan  sys
+
+#
+#message MN165
+Events:
+  In: {%2d}   Out:  {%2d}
+
+#
+#message MN166
+Flags:
+
+#
+#message MN167
+
+Location editor
+
+#
+#message MN168
+Location to edit? [Q = quit]
+
+#
+#message MN169
+The location number must be greater than zero!
+
+#
+#message MN170
+You haven't got that many locations written!
+
+#
+#message MN171
+Location number: {%d}
+
+#
+#message MN172
+Do you want to edit this location?
+
+#
+#message MN173
+What would you like to change:
+  [1] Events  [2] Description
+  [3] Flags   [4] Movement table
+  [5] Quit    [6] Re-display location
+  [7] System message
+
+#
+#message MN174
+Total characters may not exceed {%d}!
+Type '*h' at the start of a line for help.
+
+#
+#message MN175
+Write altered location back to disk?
+
+#
+#message MN176
+Location written to disk...
+
+#
+#message MN177
+Ignoring alterations...
+
+#
+#message MN178
+New value for System message?
+
+#
+#message MN179
+Location writer
+Next location is {%d}
+
+#
+#message MN180
+Location number {%d}
+Please enter description (No more than {%d} characters):
+Type '*h' at the start of a line for help.
+
+#
+#message MN181
+
+Movement table:
+
+#
+#message MN182
+  Non-movement message:
+
+#
+#message MN183
+
+Do you want to set any flags for the location?
+
+#
+#message MN184
+Please indicate the flags you wish to set by entering the identifying numbers separated by commas, ending with <RETURN>.
+Valid flags are:
+
+#
+#message MN185
+
+Location number: {%d}
+
+#
+#message MN186
+
+   Happy?
+
+#
+#message MN187
+
+Saving location...
+
+#
+#message MN188
+Location saved.
+
+#
+#message MN189
+
+Ignoring this location...
+
+#
+#message MN190
+  Another one?
+
+#
+#message MN191
+What is the minimum value for the attribute?
+
+#
+#message MN192
+By how much do you want to change the attribute if the player fails the test [a negative amount will reduce the attribute]?
+
+#
+#message MN193
+Highest permitted location?
+
+#
+#message MN194
+Lowest permitted location?
+
+#
+#message MN195
+Strength?
+
+#
+#message MN196
+Stamina?
+
+#
+#message MN197
+Intelligence?
+
+#
+#message MN198
+Dexterity?
+
+#
+#message MN199
+Preferred object?
+
+#
+#message MN200
+Are there any weapons?
+
+#
+#message MN201
+Weapons are:
+[0] no weapon
+[1] mag-gun
+[2] missile rack
+[3] laser
+[4] twin laser
+Weapon type number?
+
+#
+#message MN202
+Mag Gun
+
+#
+#message MN203
+Missile
+
+#
+#message MN204
+Laser
+
+#
+#message MN205
+Twin Laser
+
+#
+#message MN206
+Hull strength?
+
+#
+#message MN207
+Shield strength?
+
+#
+#message MN208
+Computer level?
+
+#
+#message MN209
+Percentage likelihood of attack?
+
+#
+#message MN210
+Value of kill_event?
+
+#
+#message MN211
+Can this mobile move?
+
+#
+#message MN212
+Movement interval?
+
+#
+#message MN213
+Edit
+ [1] Look message
+ [2] Examine message?
+
+#
+#message MN214
+You have 79 characters for the description
+
+#
+#message MN215
+No change made!
+
+#
+#message MN216
+You have 199 characters for the 'examine' description
+
+#
+#message MN217
+Which event do you want to change?
+
+#
+#message MN218
+  [1] Drop the object
+  [2] Eat the substance
+
+#
+#message MN219
+  [3] Attempt to kill the mobile
+
+#
+#message MN220
+  [4] Give away the object
+  [5] Get the object
+  [6] Quit editing object events
+  [7] Re-display object
+
+#
+#message MN221
+Drop - current value is {%d}
+
+#
+#message MN222
+New value?
+
+#
+#message MN223
+Eat - current value is {%d}
+
+#
+#message MN224
+Kill - current value is {%d}
+
+#
+#message MN225
+Give - current value is {%d}
+
+#
+#message MN226
+Get - current value is {%d}
+
+#
+#message MN227
+Object flags are as follows:
+
+#
+#message MN228
+  [1] - Light source:       {%s}
+#
+#message MN229
+  [2] - Musical Instrument: {%s}
+#
+#message MN230
+  [3] - Liquid:             {%s}
+#
+#message MN231
+  [4] - Edible:             {%s}
+#
+#message MN232
+  [5] - Mobile:             {%s}
+#
+#message MN233
+  [6] - Spaceship:          {%s}
+#
+#message MN234
+Which one do you want to change?
+  ([7] to quit editing flags.)
+
+#
+#message MN235
+Name: {%s}   Sex: {%c}   ID number: {%d}
+Desc: {%s}
+Examine:
+#
+#message MN236
+
+Object flags:
+
+#
+#message MN237
+  Light source
+
+#
+#message MN238
+  Musical instrument
+
+#
+#message MN239
+  Liquid
+
+#
+#message MN240
+  Edible
+
+#
+#message MN241
+  Mobile
+
+#
+#message MN242
+  Spaceship
+
+#
+#message MN243
+
+Start loc: {%d}  Recycling offset: {%d}
+
+#
+#message MN244
+Weight: {%d}  Base value: {%d}
+
+#
+#message MN245
+Reward: {%4d}
+
+#
+#message MN246
+Events:   Get    Give   Drop   Eat
+{%13d}{%7d}{%7d}{%10d}
+
+#
+#message MN247
+Kill event: {%d}
+
+#
+#message MN248
+Locations:  Start   High   Low
+{%16d}{%7d}{%7d}
+
+#
+#message MN249
+
+Object is a spaceship
+Weaponry:
+
+#
+#message MN250
+ None
+
+#
+#message MN251
+Hull: {%d}   Shields: {%d}   Computer: {%d}
+
+#
+#message MN252
+
+Str: {%3d}   Sta: {%3d}   Int: {%3d}   Dex: {%3d}
+
+#
+#message MN253
+Preferred object: {%d}
+
+#
+#message MN254
+Attack likelihood {%d}%%
+
+#
+#message MN255
+Mobile does not move.
+
+#
+#message MN256
+Moves every {%d} x 5 seconds
+
+#
+#message MN257
+
+Object editor:
+
+#
+#message MN258
+Object to edit? [QUIT to exit editor]
+
+#
+#message MN259
+Unable to find an object with that name!
+
+#
+#message MN260
+Do you want to edit this object?
+
+#
+#message MN261
+Which items do you want to alter?
+  [1] Descriptions  [2] Events       [3] Flags   [4] Locations
+  [5] Mobile items  [6] Name         [7] Sex     [8] Value/Reward
+  [9] Weight        [10] Id number
+  ---------------------------
+  [11] Re-display this object
+  [12] Exit - abandon changes
+
+#
+#message MN262
+Changes abandoned
+
+#
+#message MN263
+ID number to use for this object/mobile?
+
+#
+#message MN264
+Must be between 0 and 49...
+
+#
+#message MN265
+New name (15 characters max)?
+
+#
+#message MN266
+Sex of object? (M, F, or N)
+
+#
+#message MN267
+
+What is the object's value/reward?
+
+#
+#message MN268
+
+What is the object's weight (in str units/2)?
+
+#
+#message MN269
+More editing on this object? [Y/N]
+
+#
+#message MN270
+Save this altered object back to disk? [Y/N]
+
+#
+#message MN271
+Object saved.
+
+#
+#message MN272
+Edit abandoned.
+
+#
+#message MN273
+Can't get enough memory - please try again later
+
+#
+#message MN274
+
+Enter object name (up to 15 chars)
+
+#
+#message MN275
+Which flags do you want to set for this object?
+Flags available are:
+  [1] - Object is a light source
+  [2] - Object is a liquid
+  [3] - Object is edible
+  [4] - Object is a mobile
+  [5] - Object is a spaceship
+  [6] - No flags to be set
+Note: Setting the Spaceship flag automatically sets the Mobile flag.
+Please enter the numbers separated by commas and end with <RETURN>
+
+#
+#message MN276
+Enter description for LOOK [up to 80 chars]:
+
+#
+#message MN277
+Enter description for EXAMINE [up to 200 chars]
+
+#
+#message MN278
+Sex of mobile [m/f/n]:
+
+#
+#message MN279
+What is the object's start location number?
+
+#
+#message MN280
+What is the object's weight (in str units/2)?
+
+#
+#message MN281
+Value for GIVE event [0 for no event]:
+
+#
+#message MN282
+Value for EAT event:
+
+#
+#message MN283
+Value for DROP event:
+
+#
+#message MN284
+Value for GET event:
+
+#
+#message MN285
+What is the mobile's reward value?
+
+#
+#message MN286
+What is the value of the object?
+
+#
+#message MN287
+REMEMBER - the money will come from your planet's treasury!
+
+#
+#message MN288
+Max offset from start for recycling?
+
+#
+#message MN289
+Writing object to disk file...
+
+#
+#message MN290
+Ignoring this record...
+
+#
+#message MN291
+
+  Another one?
+
+#
+#message MN292
+Change which one?
+ [1] Start location number
+ [2] High         [3] Low
+ [4] Offset       [5] Quit
+
+#
+#message MN293
+Value changed...
+
+#
+#message MN294
+What do you want to change:
+ [1] Preferred object
+ [2] Location limits
+ [3] Attack %%        [4] Stats
+ [5] Movement rate    [6] Quit
+
+#
+#message MN295
+What is the new preferred object?
+
+#
+#message MN296
+Highest location allowed?
+
+#
+#message MN297
+Lowest location allowed?
+
+#
+#message MN298
+What is the new attack percentage?
+
+#
+#message MN299
+Which stat do you want to alter
+ [1] Stamina    [2] Strength
+ [3] Intell     [4] Dexterity
+
+#
+#message MN300
+What is the new stamina?
+
+#
+#message MN301
+What is the new strength?
+
+#
+#message MN302
+What is the new intelligence?
+
+#
+#message MN303
+What is the new dexterity?
+
+#
+#message MN304
+What is the new movement speed (-1 if no movement)?
+
+#
+#message MN305
+What do you want to change:
+ [1] Computer   [2] Hull
+ [3] Shields    [4] Weapons
+
+#
+#message MN306
+What is the new computer level?
+
+#
+#message MN307
+What is the new hull strength?
+
+#
+#message MN308
+What is the new shield strength?
+
+#
+#message MN309
+[1] Add or [2] Delete a weapon?
+
+#
+#message MN310
+Craft is unarmed!
+
+#
+#message MN311
+Which one do you want to remove (-1 = none)
+
+#
+#message MN312
+Weapon removed...
+
+#
+#message MN313
+No where to install more weapons!
+
+#
+#message MN314
+Weapon added...
+
+#
+#message MN315
+Out of memory!
+
+#
+#message MN316
+Highest location number is {%d}
+Highest event number is {%d}
+There are {%d} objects
+
+#
+#message CheckingLocations
+
+Checking locations...
+
+#
+#message MN318
+  *** Out of range move in location {%d} ***
+
+#
+#message MN319
+  *** No short description in location {%d} ***
+
+#
+#message MN320
+  *** Out of range event in location {%d} ***
+
+#
+#message MN321
+
+No errors found in location file!
+
+#
+#message MN322
+
+*** Errors found in location file! ***
+
+#
+#message MN323
+ *** There must be one, and only one
+
+#
+#message MN324
+     {%d} location(s)
+
+#
+#message MN325
+{%s} Trading exchange! ***
+
+#
+#message MN326
+{%s} Interstellar link! ***
+
+#
+#message MN327
+{%s} Hospital! ***
+
+#
+#message MN328
+
+Locations calling events:
+
+#
+#message MN329
+Event {%d} called on entry to loc {%2d} -
+
+#
+#message MN330
+Event {%d} called on wrong move in loc {%2d} -
+
+#
+#message MN333
+   *** Move to out of range location in event {%d} ***
+
+#
+#message MN334
+   *** Non-existent object required in event {%d} ***
+
+#
+#message MN335
+
+No errors found in events file!
+
+#
+#message MN336
+
+*** Errors found in events file! ***
+
+#
+#message CheckingObjects
+
+Checking objects...
+
+#
+#message MN338
+
+    *** Start location ({%d}) out of range (1-{%d})! ***
+
+#
+#message MN339
+
+   *** Get event is out of range ***
+
+#
+#message MN340
+
+   *** Give event is out of range ***
+
+#
+#message MN341
+
+   *** Consume event is out of range ***
+
+#
+#message MN342
+
+   *** Drop event is out of range ***
+
+#
+#message MN343
+
+   *** Recycle offset will take object out of location range! ***
+
+#
+#message MN344
+
+   *** Maximum location for movement is out of range! ***
+
+#
+#message MN345
+
+   *** Minimum location for movement is out of range! ***
+
+#
+#message MN346
+
+   *** The lowest location for movement is higher than the highest! ***
+
+#
+#message MN347
+
+   *** Kill event is out of range ***
+
+#
+#message MN348
+
+   *** Preferred object (#{%d}) doesn't exist! ***
+
+#
+#message MN349
+
+No errors found in objects file!
+
+
+#
+#message MN350
+
+*** Errors found in objects file! ***
+
+
+#
+#message MN351
+ Lockable Area
+#
+#message MN352
+ Unlit
+#
+#message MN353
+ Space
+#
+#message MN354
+ Death
+#
+#message MN355
+ Vacuum
+#
+#message MN356
+ Trading Exchange
+#
+#message MN357
+ Interstellar Link
+#
+#message MN358
+ General Store
+#
+#message MN359
+ Weapon Shop
+#
+#message MN360
+ Cafe
+#
+#message MN361
+ Clothes Shop
+#
+#message MN362
+ Peace
+#
+#message MN363
+ Hospital
+#
+#message MN364
+ Electronics Shop
+#
+#message MN365
+ Ship Repairs
+#
+#message MN366
+ Ship Builders
+#
+#message MN367
+ Insurance office
+#
+#message MN369
+ Airlock
+#
+#message MN370
+ Command module
+#
+#message MN371
+#trim
+  n:
+#
+#message MN372
+#trim
+  ne:
+#
+#message MN373
+#trim
+  e:
+#
+#message MN374
+#trim
+  se:
+#
+#message MN375
+#trim
+  s:
+#
+#message MN376
+#trim
+  sw:
+#
+#message MN377
+#trim
+  w:
+#
+#message MN378
+#trim
+  nw:
+#
+#message MN379
+#trim
+  up:
+#
+#message MN380
+#trim
+  d:
+#
+#message MN381
+#trim
+  in:
+#
+#message MN382
+#trim
+  out:
+#
+#message MN383
+#trim
+  planet:
+#
+#message MN384
+   *** Negative value for object! ***
+
+#
+#message MN386
+set
+#
+#message MN387
+clear
+#
+#message MN392
+
+   *** Minimum location for movement is less than 1! ***
+
+#
+#message MN393
+   Mag Gun
+
+#
+#message MN394
+   Missile Rack
+
+#
+#message MN395
+   Single Laser
+
+#
+#message MN396
+   Twin Lasers
+
+#
+#if !defined(AOL)
+#message PRESS_ENTER
+Press <ENTER> to continue
+#
+#message MN484
+Clear the events file? This will delete all the events on your planet.
+
+#
+#message MN485
+Events file not cleared...
+
+#
+#message MN486
+Unable to clear events file...
+
+#
+#message MN487
+Unable to clear locations file...
+
+#
+#message MN488
+Unable to clear objects file...
+
+#
+#message FileCleared
+File cleared...
+
+#
+#message MN490
+Clear the locations file? This will delete all the locations on your planet.
+
+#
+#message MN491
+Locations file not cleared...
+
+#
+#message MN492
+Clear the objects file? This will delete all the objects on your planet.
+
+#
+#message MN493
+Objects file not cleared...
+
+#
+#message Yes
+#trim
+Yes
+#
+#message No
+#trim
+No
+#
+#message MN520
+
+The game will not load your planet until it has been successfully checked.
+
+#
+#message CheckingLocation
+#trim
+Checking location {%2d}...
+#
+#message OldStringPrompt
+#trim
+
+Line to change is:
+{%s}
+
+Old string:
+#
+#message OldStringNotFound
+
+Cannot find string '{%s}'
+
+#
+#message NewStringPrompt
+#trim
+Replace with:
+#
+#EOF
