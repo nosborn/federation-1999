@@ -1,0 +1,50 @@
+body {
+  background-color: white;
+  color: #004080;
+  font-family: Arial, Helvetica, san-serif;
+  font-size: small;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 1em 0;
+}
+
+a:link    { color: #0000EE; } /* classic blue links */
+a:visited { color: #551A8B; } /* classic purple visited */
+a:active  { color: #FF0000; } /* classic red active */
+
+.container {
+  margin: 0 auto;
+  text-align: left;
+  width: 600px;
+}
+
+.font1 { /* <font size="1"> */
+  font-size: xx-small;
+}
+
+.font2 { /* <font size="2"> */
+  font-size: x-small;
+}
+
+.font3 { /* <font size="3"> (default) */
+  font-size: small;
+}
+
+.font { /* <font size="4"> */
+  font-size: medium;
+}
+
+.font5 { /* <font size="5"> */
+  font-size: large;
+}
+
+.font6 { /* <font size="6"> */
+  font-size: x-large;
+}
+
+.font7 { /* <font size="7"> */
+  font-size: xx-large;
+}

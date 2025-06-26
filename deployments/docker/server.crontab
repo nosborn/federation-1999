@@ -1,0 +1,4 @@
+# Daily game shutdown (weekdays only).
+56 07 * * 1-5 exec kill -USR1 $(<${HOME}/.fedtpd.pid)
+00 08 * * 1-5 exec kill -USR2 $(<${HOME}/.fedtpd.pid)
+01 08 * * 1-5 exec kill -TERM $(<${HOME}/.fedtpd.pid)

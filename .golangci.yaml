@@ -1,0 +1,75 @@
+---
+version: !!str 2
+
+linters:
+  enable:
+    - containedctx
+    - decorder
+    # - dupl
+    - exhaustive
+    - gocritic
+    - gosec
+    - intrange
+    - iotamixing
+    # - noctx
+    - prealloc
+    - misspell
+    - testifylint
+    - unconvert
+    - usestdlibvars
+    - whitespace
+  disable:
+    - errcheck
+  settings:
+    exhaustive:
+      default-signifies-exhaustive: true
+    gocritic:
+      disabled-checks:
+        - exitAfterDefer
+  exclusions:
+    warn-unused: true
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    rules:
+      - linters:
+          - dupl
+          - gosec
+          # - noctx
+          - prealloc
+        path: _test.go
+      - linters:
+          - gofmt
+          - goimports
+        path: cmd/workbench-go/messages.go
+      - linters:
+          - gofmt
+          - goimports
+        path: internal/text/messages.go
+      - linters:
+          - gosec
+        text: "G115:" # integer overflow conversion
+      - linters:
+          - gosec
+        text: "G404:" # Insecure random number source
+      # - linters:
+      #     - noctx
+      #   path: tools/
+      - linters:
+          - staticcheck
+        text: "QF1001:" # Apply De Morgan’s law
+
+formatters:
+  enable:
+    - gofumpt
+    - goimports
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
+
+run:
+  # relative-path-mode: wd # required by `nvim-lint`
+  concurrency: 8
