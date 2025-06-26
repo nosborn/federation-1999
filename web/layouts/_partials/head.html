@@ -1,0 +1,10 @@
+<meta charset="iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+{{ if .Description -}}
+<meta http-equiv="description" content="{{ .Description }}">
+{{ end -}}
+{{ if .Keywords -}}
+<meta name="keywords" content="{{ delimit .Keywords "," }}">
+{{ end -}}
+<meta name="viewport" content="width=device-width">
+<title>{{ .Title }}</title>

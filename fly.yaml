@@ -1,0 +1,78 @@
+# yamllint disable rule:line-length
+---
+app: federation-1999
+primary_region: iad # Ashburn, Virginia (US)
+
+build:
+  image: federation-1999:latest
+
+deploy:
+  strategy: immediate
+
+http_service:
+  checks:
+    - grace_period: 10s
+      interval: 30s
+      path: /
+  force_https: true
+  http_options:
+    response:
+      headers:
+        Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://web.archive.org; connect-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'self';
+        # Cross-Origin-Embedder-Policy: require-corp
+        Cross-Origin-Opener-Policy: same-origin
+        Cross-Origin-Resource-Policy: same-site
+        Permissions-Policy: camera=(),geolocation=(),interest-cohort=(),microphone=(),payment=(),publickey-credentials-get=()
+        Referrer-Policy: strict-origin
+        Strict-Transport-Security: max-age=31536000; includeSubDomains
+        X-Content-Type-Options: nosniff
+        X-Frame-Options: SAMEORIGIN
+        X-XSS-Protection: 0
+
+services:
+  - checks: []
+    internal_port: 23
+    ports:
+      - handlers:
+          - proxy_proto
+        port: 23
+      - handlers:
+          - proxy_proto
+          - tls
+        port: 992
+      - handlers:
+          - proxy_proto
+        port: 30003 # be like Federation 2
+    protocol: tcp
+
+mounts:
+  - destination: /home/fed/data
+    initial_size: 1gb
+    source: data
+
+vm:
+  cpu_kind: shared
+  cpus: 1
+  memory_mb: 256
+
+checks:
+  fedtpd_health:
+    grace_period: 30s
+    interval: 15s
+    method: get
+    path: /health
+    port: 8082
+    timeout: 5s
+    type: http
+  telnetd_health:
+    grace_period: 30s
+    interval: 15s
+    method: get
+    path: /health
+    port: 8081
+    timeout: 5s
+    type: http
+
+metrics:
+  - path: /metrics
+    port: 8082
