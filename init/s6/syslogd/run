@@ -1,0 +1,5 @@
+#!/bin/sh
+
+exec /usr/bin/s6-socklog -d 4
+
+# vim: ft=sh

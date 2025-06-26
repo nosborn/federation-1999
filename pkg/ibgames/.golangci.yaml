@@ -1,0 +1,51 @@
+---
+version: !!str 2
+
+linters:
+  enable:
+    - containedctx
+    - decorder
+    # - dupl
+    - exhaustive
+    - gocritic
+    # - gosec
+    - intrange
+    # - noctx
+    - prealloc
+    - misspell
+    - testifylint
+    - unconvert
+    - usestdlibvars
+    - whitespace
+  disable:
+    - errcheck
+  settings:
+    exhaustive:
+      default-signifies-exhaustive: true
+    gocritic:
+      enable-all: true
+      disabled-checks:
+        - commentedOutCode
+        # - todoCommentWithoutDetail
+  exclusions:
+    warn-unused: true
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    rules:
+      - linters:
+          - dupl
+          - gosec
+          - prealloc
+        path: _test.go
+
+formatters:
+  enable:
+    - gofmt
+    - goimports
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
