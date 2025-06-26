@@ -1,0 +1,15 @@
+#!/bin/sh
+
+export DBPATH=/home/fed/data
+export DOCUMENT_ROOT=/var/www/htdocs
+
+if [ -n "${FLY_APP_NAME:-}" ]; then
+  HTTPD_FLAGS=-proxy-proto
+else
+  HTTPD_FLAGS=
+fi
+
+# cd /home/httpd || exit
+exec /usr/bin/s6-setuidgid www-data /opt/www/sbin/httpd ${HTTPD_FLAGS}
+
+# vim: ft=sh
