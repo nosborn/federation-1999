@@ -1,0 +1,52 @@
+html, body {
+  background: #0b0b0b;
+  color: #ddd;
+  font-family: monospace;
+  font-size: 15px;
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#terminal {
+  flex: 1;
+  white-space: pre !important;
+}
+
+#input-bar {
+  background: #111;
+  border-top: 1px solid #222;
+  display: flex;
+  font: inherit;
+  gap: 6px;
+  padding: 6px;
+}
+
+#command {
+  background: #000;
+  border: 1px solid #333;
+  color: #fff;
+  flex: 1;
+  font: inherit;
+  outline: none;
+  padding: 8px;
+}
+
+#command:disabled {
+  background: #222;
+  color: #666;
+  cursor: not-allowed;
+}
+
+#status {
+  align-self: center;
+  border: 1px solid #333;
+  color: #bbb;
+  padding: 8px;
+  text-align: right;
+}

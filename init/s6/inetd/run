@@ -1,0 +1,5 @@
+#!/bin/sh
+
+exec /usr/sbin/inetutils-inetd --environment --foreground
+
+# vim: ft=sh

@@ -1,0 +1,20 @@
+---
+BasedOnStyle: LLVM
+
+ContinuationIndentWidth: 2
+Cpp11BracedListStyle: false
+AlwaysBreakAfterDefinitionReturnType: TopLevel
+SpacesInContainerLiterals: false
+ColumnLimit: 0
+SortIncludes: false
+IndentPPDirectives: AfterHash
+PPIndentWidth: 1
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+InsertBraces: true
+ConstructorInitializerIndentWidth: 2
+FixNamespaceComments: false
+IndentCaseLabels: true
+MaxEmptyLinesToKeep: 2
+SpaceAfterCStyleCast: true
+Standard: Cpp03
