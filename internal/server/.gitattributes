@@ -1,0 +1,7 @@
+arena.go filter=git-crypt diff=git-crypt
+horsell.go filter=git-crypt diff=git-crypt
+horsellsystem.go filter=git-crypt diff=git-crypt
+snark.go filter=git-crypt diff=git-crypt
+snarksystem.go filter=git-crypt diff=git-crypt
+sol.go filter=git-crypt diff=git-crypt
+solsystem.go filter=git-crypt diff=git-crypt

@@ -1,0 +1,62 @@
+---
+app: federation-1999
+primary_region: iad # Ashburn, Virginia (US)
+
+build:
+  dockerfile: deployments/docker/Dockerfile
+
+deploy:
+  strategy: immediate
+
+services:
+  - checks: []
+    internal_port: 23
+    ports:
+      - handlers:
+          - proxy_proto
+        port: 23
+      - handlers:
+          - proxy_proto
+          - tls
+        port: 992
+    protocol: tcp
+  - checks: []
+    internal_port: 80
+    ports:
+      - port: 80
+      - handlers:
+          - tls
+        port: 443
+    protocol: tcp
+
+mounts:
+  - destination: /home/fed/data
+    initial_size: 1gb
+    source: data
+
+vm:
+  cpu_kind: shared
+  cpus: 1
+  memory_mb: 256
+
+checks:
+  fedtpd_health:
+    grace_period: 30s
+    interval: 15s
+    method: get
+    path: /health
+    port: 8080
+    timeout: 5s
+    type: http
+  telnetd_health:
+    grace_period: 30s
+    interval: 15s
+    method: get
+    path: /health
+    port: 8081
+    timeout: 5s
+    type: http
+
+metrics:
+  - path: /metrics
+    port: 8080
