@@ -1,0 +1,9 @@
+billing.sqlite
+billing.sqlite-*
+person.d
+person.d-*
+persona.d
+persona.d-*
+seed.tgz
+workbench[0-9]/
+workbench-*
