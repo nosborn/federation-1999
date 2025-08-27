@@ -1,4 +1,4 @@
-FROM debian:12.11-slim
+FROM debian:13.0-slim
 
 ARG ARCH=amd64
 
