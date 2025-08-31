@@ -1,0 +1,9 @@
+accounts.sqlite
+accounts.sqlite-*
+person.d
+person.d-*
+persona.d
+persona.d-*
+seed.tgz
+workbench-*
+workbench[0-9]/
