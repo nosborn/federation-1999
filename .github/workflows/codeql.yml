@@ -1,0 +1,64 @@
+# yamllint disable rule:line-length
+---
+name: CodeQL Advanced
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: 41 0 * * 2
+
+permissions:
+  # actions: read # only required for workflows in private repositories
+  # contents: read # only required for workflows in private repositories
+  packages: read # required to fetch internal or private CodeQL packs
+  security-events: write # required for all workflows
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  analyze:
+    if: github.event.repository.name != 'private-federation-1999'
+    name: Analyze (Go)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+
+      - name: Install git-crypt
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git-crypt
+
+      - name: Unlock the repository
+        run: |
+          echo '${{ secrets.GIT_CRYPT_KEY_B64 }}' | base64 -d >git-crypt-key
+          git-crypt unlock git-crypt-key
+          rm git-crypt-key
+
+      - uses: actions/setup-go@44694675825211faa026b3c33043df3e48a5fa00 # v6.0.0
+        with:
+          go-version-file: go.mod
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@7273f08caa1dcf2c2837f362f1982de0ab4dc344 # v3.29.10
+        with:
+          build-mode: manual
+          languages: go
+          queries: security-extended
+          # queries: security-extended,security-and-quality
+
+      - run: |-
+          make
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@7273f08caa1dcf2c2837f362f1982de0ab4dc344 # v3.29.10
+        with:
+          category: /language:go

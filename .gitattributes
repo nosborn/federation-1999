@@ -1,0 +1,3 @@
+db/*/*_seed_*.sql filter=git-crypt diff=git-crypt
+fed.tcl filter=git-crypt diff=git-crypt
+internal/*/messages.txt filter=git-crypt diff=git-crypt
