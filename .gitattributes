@@ -1,0 +1,5 @@
+db/*/*_import_*.sql filter=git-crypt diff=git-crypt
+db/*/*_import_*.sql.gz filter=git-crypt diff=git-crypt
+db/*/*_seed_*.sql filter=git-crypt diff=git-crypt
+fed.tcl filter=git-crypt diff=git-crypt
+internal/*/messages.txt filter=git-crypt diff=git-crypt
