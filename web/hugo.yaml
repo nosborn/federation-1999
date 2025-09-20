@@ -1,0 +1,11 @@
+---
+baseURL: https://federation-1999.fly.dev
+cleanDestinationDir: true
+disableHugoGeneratorInject: true
+disableKinds:
+  - rss
+  - taxonomy
+  - term
+enableRobotsTXT: true
+languageCode: en
+uglyURLs: true

@@ -1,0 +1,13 @@
+*.log
+.envrc
+.fedtpd.*
+.git/
+.github/
+assets/
+cmd/
+data/
+!data/person.d
+internal/
+scripts/
+!scripts/init-ibgames-db.sh
+tools/

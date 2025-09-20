@@ -1,0 +1,9 @@
+{{- define "main" -}}
+  {{- if ne .Params.includeHeader false -}}
+    {{ partial "header.html" (default (.Title | upper) (.Params.headerText | safeHTML)) }}
+  {{- end -}}
+  {{ .Content }}
+  {{- if ne .Params.includeFooter false -}}
+    {{ partial "footer.html" . }}
+  {{- end -}}
+{{ end }}
