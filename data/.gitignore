@@ -1,0 +1,8 @@
+ibgames.sqlite
+ibgames.sqlite-*
+person.d
+person.d-*
+persona.d
+persona.d-*
+workbench-*
+workbench[0-9]/

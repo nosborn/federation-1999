@@ -1,0 +1,60 @@
+---
+baseURL: https://federation-1999.fly.dev
+cleanDestinationDir: true
+disableHugoGeneratorInject: true
+disableKinds:
+  - rss
+  - taxonomy
+  - term
+enableRobotsTXT: true
+languageCode: en
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+minify:
+  # disableCSS: false
+  disableHTML: true
+  # disableJS: false
+  # disableJSON: false
+  # disableSVG: false
+  # disableXML: false
+  minifyOutput: true
+  # tdewolff:
+  #   css:
+  #     inline: false
+  #     keepCSS2: false
+  #     precision: 0
+  #     version: 0
+  #   html:
+  #     keepComments: false
+  #     keepConditionalComments: false
+  #     keepDefaultAttrVals: true
+  #     keepDocumentTags: true
+  #     keepEndTags: true
+  #     keepQuotes: false
+  #     keepSpecialComments: true
+  #     keepWhitespace: false
+  #     templateDelims:
+  #       - ""
+  #       - ""
+  #   js:
+  #     keepVarNames: false
+  #     precision: 0
+  #     version: 2022
+  #   json:
+  #     keepNumbers: false
+  #     precision: 0
+  #   svg:
+  #     inline: false
+  #     keepComments: false
+  #     precision: 0
+  #   xml:
+  #     keepWhitespace: false
+module:
+  mounts:
+    - source: assets
+      target: assets
+    - source: node_modules/@xterm/xterm
+      target: assets/vendor/xterm
+uglyURLs: true

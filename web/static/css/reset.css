@@ -1,0 +1,32 @@
+/* Base body defaults (equivalent to <body text="..."> etc.) */
+body {
+  background-color: white;    /* replaces bgcolor */
+  color: black;               /* replaces text */
+  font-family: serif;         /* old default, can override to Arial/etc. */
+  font-size: small;           /* equivalent to <font size="3"> baseline */
+  margin: 8px;                /* browsers of the era defaulted to ~8px */
+}
+
+/* Anchor color equivalents */
+a:link    { color: blue; }    /* replaces link="blue" */
+a:visited { color: purple; }  /* replaces vlink="purple" */
+a:active  { color: red; }     /* replaces alink="red" }
+
+/* Heading sizes as per HTML 4 user agent stylesheet */
+h1 { font-size: 2em;   font-weight: bold; margin: 0.67em 0; }
+h2 { font-size: 1.5em; font-weight: bold; margin: 0.75em 0; }
+h3 { font-size: 1.17em;font-weight: bold; margin: 0.83em 0; }
+h4 { font-size: 1em;   font-weight: bold; margin: 1.12em 0; }
+h5 { font-size: 0.83em;font-weight: bold; margin: 1.5em 0; }
+h6 { font-size: 0.75em;font-weight: bold; margin: 1.67em 0; }
+
+/* Paragraphs and lists */
+p      { margin: 1em 0; }
+ul, ol { margin: 1em 0; padding-left: 40px; }
+li     { margin: 0.5em 0; }
+
+b       { font-weight: bolder; }
+strong  { font-weight: bolder; }
+
+i       { font-style: italic; }
+em      { font-style: italic; }
