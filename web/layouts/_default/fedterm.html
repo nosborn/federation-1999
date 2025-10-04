@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+  {{ $xtermCSS := resources.Get "vendor/xterm/css/xterm.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $xtermCSS.RelPermalink }}">
+  {{ $fedtermCSS := resources.Get "css/fedterm.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $fedtermCSS.RelPermalink }}">
+</head>
+<body>
+  {{ .Content }}
+  {{ $xtermJS := resources.Get "vendor/xterm/lib/xterm.js" | minify | fingerprint }}
+  <script src="{{ $xtermJS.RelPermalink }}"></script>
+  {{ $js := resources.Get "js/fedterm.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+---
+title: Signup
+---
+<center>
+  <font face="Arial,Helvetica">
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center" valign="top" rowspan="2">
+          <img src="/images/iblogosmall.gif" alt="IB" width="72" height="65">
+        </td>
+      </tr>
+    </table>
+    <table border="0" cellpadding="10" cellspacing="10">
+      <tr>
+        <td bgcolor="#004080">
+          <font color="#FFFF00" face="Arial,Helvetica">
+            <strong>SET UP AN ibgames ACCOUNT</strong>
+          </font>
+        </td>
+      </tr>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" width="600">
+      <tr>
+        <td>
+          It's easy to set up an account with ibgames. All you need to do is choose an account name and password, and give us your email address.
+          <p>
+            If you know what you are doing, just type in boxes and click on the button. Otherwise, read the explanation below for what you should be typing here.
+          </p>
+        </td>
+      </tr>
+    </table>
+    <form method="POST">
+      <table border="0">
+        <tr>
+          <td>
+            <table border="0">
+              <tr>
+                <td align="right">
+                  <b>Account ID:</b>
+                </td>
+                <td>
+                  <input type="text" name="AccountID" size="40" maxlength="32">
+                </td>
+              </tr>
+              <tr>
+                <td align="right">
+                  <b>Password:</b>
+                </td>
+                <td>
+                  <input type="password" name="Password" size="40" maxlength="72">
+                </td>
+              </tr>
+              <tr>
+                &nbsp;
+                <td>
+                </td>
+                <td>
+                  <input type="password" name="PasswordConfirmation" size="40" maxlength="72">
+                </td>
+              <tr>
+                <td align="right">
+                  <b>Email Address:</b>
+                </td>
+                <td>
+                  <input type="text" name="EmailAddress" size="40" maxlength="64">
+                </td>
+              <tr>
+                <td align="right">
+                  <b>Buddy Name:</b>
+                </td>
+                <td>
+                  <input type="text" name="Buddy" size="40" maxlength="15">
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="checkbox" name="Newsletter" value="Y" checked>
+            &nbsp;
+            <b>Send me email about important ibgames announcements</b>
+          </td>
+        </tr>
+      </table>
+      <p>
+        <input type="image" src="/images/buttons/signup.gif" alt="Sign Me Up" align=bottom border=0 height=51 width=129>
+      </p>
+    </form>
+    <table border="0" cellpadding="0" cellspacing="0" width="600">
+      <tr>
+        <td>
+          The <strong>account ID</strong> has nothing to do with the character name you use in any of our games, or your AOL screen name; it's just the log-on name you will use to identify yourself to our computers when you play our games. You can choose anything you like, so long as you can remember it. The account ID can be from 4 to 32 characters long, and you can use letters, numbers, or the symbols @ . - and_. The first character has to be a letter. We advise you not to pick something other players can easily guess!
+          <p>
+            The <strong>password</strong> is to stop anyone logging onto the ibgames computers using your account. It can be anything you like, so long as you can remember it. It can be from 6 to 72 characters long, and you can use letters, numbers, or any other symbols. You can also put spaces in it so instead of a password you can use a passphrase - for example, the first line of your favorite song - which will be even more secure.
+          </p>
+          <p>
+            You will have to type it in twice to make sure you didn't mistype it.
+          </p>
+          <p>
+            We need your <strong>email address</strong> so we can contact you about your ibgames account. If you are using AOL then your email address will be of the form <em>screenname@aol.com</em>. If you have more than one email address then please give us the one which you check for mail most often. If you ever change your email address then please remember to tell us of the change.
+          <p>
+            If you have been told about Fed by someone else, then they can get free time for having recommended you, under our <strong>Buddy Scheme</strong>. Type in their Fed character name and as soon as you buy some time credits, they'll get their reward.
+          <p>
+            <strong>You won't receive any junk mail from us.</strong> That's a promise. The only time we will ever send out bulkmail is to announce a major new feature to the ibgames site, such as a new game. We will never sell your email address to anyone else, and other players will not be able to find out your email address unless you choose to tell them.
+          </p>
+          <p>
+            If you prefer not to receive email from us, please uncheck the "send me email about important ibgames announcements" box.
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+          <img src="/images/buttons/click.gif" alt="Click on the buttons" width="203" height="35">
+        </td>
+      </tr>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+          <a href="/index.html">
+            <img src="/images/buttons/small05.gif" alt="Main Page" border="0" width="77" height="51">
+          </a>
+        </td>
+        <td colspan="2">
+          <a href="https://web.archive.org/web/19990423052928id_/http://www.ibgames.net/help/index.html">
+            <img src="/images/buttons/small19.gif" alt="Help Page" border="0" width="76" height="51">
+          </a>
+        </td>
+      </tr>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+          <br>
+          <img src="/images/iblogosmall.gif" alt="IB" width="72" height="65">
+        </td>
+      </tr>
+    </table>
+  </font>
+</center>

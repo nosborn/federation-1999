@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /account/
+Allow: /account/signup
+Disallow: /account/*
+Allow: /
