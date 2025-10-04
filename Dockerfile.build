@@ -1,0 +1,36 @@
+FROM ubuntu:24.04
+
+ARG GOVERSION
+
+RUN export DEBIAN_FRONTEND=noninteractive \
+    && apt-get update \
+    && apt-get -y dist-upgrade \
+    && apt-get -y install --no-install-recommends \
+        "ca-certificates=*" \
+        "curl=*" \
+        "g++-13=*" \
+        "gcc-13=*" \
+        "git=*" \
+        "libc6-dev=*" \
+        "libncurses-dev=*" \
+        "make=*" \
+        "sqlite3=*" \
+    && rm -rf /var/lib/apt/lists \
+    && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 30 \
+    && update-alternatives --set gcc /usr/bin/gcc-13 \
+    && update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 30 \
+    && update-alternatives --set g++ /usr/bin/g++-13
+
+ENV GOLANG_VERSION=${GOVERSION}
+ENV GOPATH=/go
+ENV GOTOOLCHAIN=local
+ENV PATH=${GOPATH}:/usr/local/go/bin:${PATH}
+
+RUN mkdir -p "${GOPATH}/src" "${GOPATH}/bin" \
+    && chmod -R 1777 "${GOPATH}" \
+    && curl -fLsS -o go.tgz "https://dl.google.com/go/go${GOVERSION}.linux-amd64.tar.gz" \
+    && tar -C /usr/local -xzf go.tgz \
+    && rm go.tgz \
+    && go version
+
+WORKDIR ${GOPATH}
