@@ -1,0 +1,14 @@
+*.log
+.envrc
+.fedtpd.*
+.git/
+.github/
+assets/
+cmd/
+!cmd/telnetd/issue
+data/
+!data/person.d
+internal/
+scripts/
+!scripts/init-ibgames-db.sh
+tools/

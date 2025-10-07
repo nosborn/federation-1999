@@ -1,0 +1,93 @@
+# yamllint disable rule:line-length
+---
+name: CodeQL Advanced
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: 29 15 * * 5
+
+permissions:
+  packages: read
+  security-events: write
+
+env:
+  HUGO_VERSION: 0.150.1
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+
+      - name: Setup Go
+        uses: actions/setup-go@44694675825211faa026b3c33043df3e48a5fa00 # v6.0.0
+        with:
+          go-version-file: go.mod
+
+      - name: Install Hugo
+        run: |
+          mkdir "${RUNNER_TEMP:?}/hugo"
+          curl -fJLOsS "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          tar -C "${RUNNER_TEMP:?}/hugo" -xf "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          rm "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          echo "${RUNNER_TEMP:?}/hugo" >>"${GITHUB_PATH}"
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@64d10c13136e1c5bce3e5fbde8d4906eeaafc885 # v3.30.6
+        with:
+          build-mode: ${{ matrix.build-mode }}
+          languages: ${{ matrix.language }}
+          queries: security-extended
+
+      - if: matrix.build-mode == 'manual'
+        shell: bash
+        run: |
+          make
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@64d10c13136e1c5bce3e5fbde8d4906eeaafc885 # v3.30.6
+        with:
+          category: /language:${{ matrix.language }}
+          output: results-${{ matrix.language }}.sarif
+          upload: false
+
+      # - name: filter-sarif
+      #   uses: advanced-security/filter-sarif@bc96d9fb9338c5b48cc440b1b4d0a350b26a20db # v1.0.0
+      #   with:
+      #     patterns: |
+      #       -cmd/perivale/perivale.cc:c-cpp/poorly-documented-function
+      #       -cmd/perivale/perivale.cc:codeql[c-cpp/long-switch
+      #       -internal/server/parser/parser.tab.go:go/todo
+      #     input: sarif-results/java.sarif
+      #     output: sarif-results/java.sarif
+
+      - name: Upload SARIF
+        uses: github/codeql-action/upload-sarif@64d10c13136e1c5bce3e5fbde8d4906eeaafc885 # v3.30.6
+        with:
+          sarif_file: results-${{ matrix.language }}.sarif
+
+    strategy:
+      matrix:
+        include:
+          - language: actions
+            build-mode: none
+          - language: c-cpp
+            build-mode: manual
+          - language: go
+            build-mode: manual
+          - language: javascript-typescript
+            build-mode: none
+      fail-fast: false
