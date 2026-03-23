@@ -1,4 +1,4 @@
-FROM debian:13.2-slim
+FROM debian:13.4-slim
 
 ENV TZ=America/New_York
 ENV ZONEINFO=America/New_York
